@@ -3,7 +3,7 @@
   "short_name": "__MSG_extName__",
   "version": "2.1.2",
   "manifest_version": 2,
-  "author": "Sander Brand",
+  "author": "George Dorn",
   "default_locale": "en",
   "description": "__MSG_extDescription__",
   "homepage_url": "https://github.com/nextcloud/passman-webextension",
