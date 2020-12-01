@@ -52,7 +52,7 @@
                 enableAutoFill: true,
                 enablePasswordPickerr: true,
                 enableAutoSubmit: false,
-                debug: false,
+                debug: true,
                 accounts: []
             };
             $scope.vaults = [];

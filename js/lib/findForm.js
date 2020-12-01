@@ -179,7 +179,7 @@ var formManager = function(){
         },
         log: function (str) {
             if(settings.debug){
-                console.log(str);
+		console.log.apply(console, arguments);
             }
         }
     };
@@ -223,8 +223,13 @@ function getFormFromElement(elem) {
 
 function dispatchEvents(element){
     var eventNames = [ 'click', 'focus', 'keypress', 'keydown', 'keyup', 'input', 'blur', 'change' ];
+    var original_value = element.value;
     eventNames.forEach(function(eventName) {
         element.dispatchEvent(new Event(eventName, {"bubbles":true}));
+        // if one of those events discarded the value, put it back!
+        if (!element.value) {
+           element.value = original_value;
+        }
     });
 }
 
